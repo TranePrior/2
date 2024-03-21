@@ -130,9 +130,12 @@ namespace InfimaGames.LowPolyShooterPack
             //Set grounded. Now we know for sure that we're grounded.
             grounded = true;
         }
-			
+        public float max_Y = 0f;
         protected override void FixedUpdate()
         {
+            Vector3 position = transform.position;
+            position.y = Mathf.Min(position.y, max_Y);
+            transform.position = position;
             //Move.
             MoveCharacter();
             
