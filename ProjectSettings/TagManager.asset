@@ -16,11 +16,16 @@ TagManager:
   - Wood (Static)
   - Dirt (Static)
   - Wood
+  - Enemy
+  - Bullet
+  - Menu
+  - spawn
+  - Health
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 
@@ -33,7 +38,7 @@ TagManager:
   - Post Processing Scope
   - Invisible Wall
   - Projectile
-  - 
+  - Bullet
   - 
   - 
   - 

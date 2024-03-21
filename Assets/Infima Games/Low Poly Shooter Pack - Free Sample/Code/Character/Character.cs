@@ -196,8 +196,7 @@ namespace InfimaGames.LowPolyShooterPack
 			//Cache a reference to the overlay layer's index.
 			layerOverlay = characterAnimator.GetLayerIndex("Layer Overlay");
 		}
-
-		protected override void Update()
+        protected override void Update()
 		{
 			//Match Aim.
 			aiming = holdingButtonAim && CanAim();
