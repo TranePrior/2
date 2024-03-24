@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 3459449225088128664}
   - component: {fileID: 806306685248098185}
   - component: {fileID: 2407366369813854294}
+  - component: {fileID: -2457546413796073316}
   m_Layer: 10
   m_Name: enemyPrefab
   m_TagString: Enemy
@@ -404,9 +405,10 @@ MonoBehaviour:
   currentHealth: 30
   animator: {fileID: 9023298078994464650}
   stopDistance: 1
-  attackDamage: 10
-  playerTarget: {fileID: 0}
   attackDistance: 1
+  playerTarget: {fileID: 0}
+  damage: 20
+  player: {fileID: 0}
 --- !u!54 &2407366369813854294
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -434,6 +436,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-2457546413796073316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114598550438769794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6601179b442014e4a8d5d969aac8d5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: {fileID: 8300000, guid: dd1338b991c73447a983adbc8effe3d5, type: 3}
+  runSound: {fileID: 8300000, guid: c10e2328d6c3a45afa578e9ab3fdbd69, type: 3}
 --- !u!1 &1513383862194688268
 GameObject:
   m_ObjectHideFlags: 0

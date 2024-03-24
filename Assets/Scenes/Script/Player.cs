@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,10 +21,22 @@ public class Player : MonoBehaviour
         {
             TakeDamage(1);
         }
+
+        if (currentHealth <= 0)
+        {
+            // Останавливаем все процессы
+            Time.timeScale = 0;
+            // Разблокируйте курсор
+            corsorUnloced();
+        }
     }
 
     public void TakeDamage(int damage)
     {
+        if (currentHealth <= 0) // Если здоровье игрока равно или меньше 0, не наносите урон
+        {
+            return;
+        }
         currentHealth -= damage;
         DisplayHealth();
     }
@@ -31,5 +45,11 @@ public class Player : MonoBehaviour
     {
         float healthPercentage = (float)currentHealth / maxHealth * 100; // Вычисляем процент здоровья
         healthText.text = healthPercentage.ToString("0"); // Отображаем процент здоровья
+    }
+  
+    // Предполагается, что этот метод разблокирует курсор
+    void corsorUnloced()
+    {
+        // Ваш код для разблокировки курсора
     }
 }
