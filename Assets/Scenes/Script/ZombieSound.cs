@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public AudioClip isAttacking; // Загрузите звук атаки зомби
-    public AudioClip Run; // Загрузите звук бега зомби
+    public AudioClip isAttacking;
+    public AudioClip Run;
     private AudioSource audioSource;
 
     void Start()
@@ -11,13 +11,11 @@ public class Zombie : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Этот метод вызывается из события анимации атаки
     public void PlayAttackSound()
     {
         audioSource.PlayOneShot(isAttacking);
     }
 
-    // Этот метод вызывается из события анимации бега
     public void PlayRunSound()
     {
         audioSource.PlayOneShot(Run);

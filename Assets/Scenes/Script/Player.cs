@@ -24,16 +24,14 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            // Останавливаем все процессы
             Time.timeScale = 0;
-            // Разблокируйте курсор
-            corsorUnloced();
+            CorsorUnloced();
         }
     }
 
     public void TakeDamage(int damage)
     {
-        if (currentHealth <= 0) // Если здоровье игрока равно или меньше 0, не наносите урон
+        if (currentHealth <= 0) 
         {
             return;
         }
@@ -43,13 +41,11 @@ public class Player : MonoBehaviour
 
     void DisplayHealth()
     {
-        float healthPercentage = (float)currentHealth / maxHealth * 100; // Вычисляем процент здоровья
-        healthText.text = healthPercentage.ToString("0"); // Отображаем процент здоровья
+        float healthPercentage = (float)currentHealth / maxHealth * 100;
+        healthText.text = healthPercentage.ToString("0");
     }
   
-    // Предполагается, что этот метод разблокирует курсор
-    void corsorUnloced()
+    void CorsorUnloced()
     {
-        // Ваш код для разблокировки курсора
     }
 }

@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage = 10f; // Урон, который наносит пуля
-
+    public float damage = 10f; 
     void OnCollisionEnter(Collision collision)
     {
         var hitObject = collision.gameObject;
@@ -15,6 +14,6 @@ public class Bullet : MonoBehaviour
             Debug.Log("Collision detected");
         }
 
-        Destroy(gameObject); // Уничтожаем пулю после столкновения
+        Destroy(gameObject);
     }
 }
